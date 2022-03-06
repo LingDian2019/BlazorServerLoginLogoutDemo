@@ -29,3 +29,5 @@ bld/
 /test/WebAPITestProject/FrameworkCore.WebAPITestProject/Logs
 /nupkgs
 /test/WebAPITestProject/FrameworkCore.WebAPITestProject.xml
+/src/BlazorServerLoginLogoutDemo.Web/obj
+/src/BlazorServerLoginLogoutDemo.Web/bin

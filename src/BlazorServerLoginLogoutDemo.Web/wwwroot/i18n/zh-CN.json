@@ -1,7 +1,7 @@
 {
   "$DefaultLanguage": "true",
   "$Text": "中文简体",
-  "LoginWelcome": "欢迎使用项目管理系统",
+  "LoginWelcome": "欢迎使用XX系统",
   "Account": "账号",
   "Password": "密码",
   "Login": "登录",

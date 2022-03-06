@@ -14,7 +14,7 @@ namespace BlazorServerLoginLogoutDemo.Web.Pages.Authentication
         List<UserInfo> userInfos = new()
         {
             new UserInfo(){ID = "1111111111111111111111111111111",UserName="零点一号",LoginAccount = "admin1",LoginPassword = "admin1"},
-            new UserInfo(){ID = "2222222222222222222222222222222",UserName="零点二号",LoginAccount = "admin3",LoginPassword = "admin2"},
+            new UserInfo(){ID = "2222222222222222222222222222222",UserName="零点二号",LoginAccount = "admin2",LoginPassword = "admin2"},
             new UserInfo(){ID = "3333333333333333333333333333333",UserName="零点三号",LoginAccount = "admin3",LoginPassword = "admin3"},
         };
 

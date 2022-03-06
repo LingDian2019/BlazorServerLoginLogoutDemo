@@ -1,0 +1,108 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = BlazorServerLoginLogoutDemo.Web
+build_property.RootNamespace = BlazorServerLoginLogoutDemo.Web
+build_property.ProjectDir = D:\PrivateProject\BlazorServerLoginLogoutDemo\src\BlazorServerLoginLogoutDemo.Web\
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = D:\PrivateProject\BlazorServerLoginLogoutDemo\src\BlazorServerLoginLogoutDemo.Web
+build_property._RazorSourceGeneratorDebug = 
+
+[D:/PrivateProject/BlazorServerLoginLogoutDemo/src/BlazorServerLoginLogoutDemo.Web/App.razor]
+build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PrivateProject/BlazorServerLoginLogoutDemo/src/BlazorServerLoginLogoutDemo.Web/Pages/Authentication/Components/Login.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQXV0aGVudGljYXRpb25cQ29tcG9uZW50c1xMb2dpbi5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PrivateProject/BlazorServerLoginLogoutDemo/src/BlazorServerLoginLogoutDemo.Web/Pages/Authentication/Login-v1.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQXV0aGVudGljYXRpb25cTG9naW4tdjEucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PrivateProject/BlazorServerLoginLogoutDemo/src/BlazorServerLoginLogoutDemo.Web/Pages/Authentication/LogOut.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQXV0aGVudGljYXRpb25cTG9nT3V0LnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PrivateProject/BlazorServerLoginLogoutDemo/src/BlazorServerLoginLogoutDemo.Web/Pages/Dashboard/MainDashboard.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRGFzaGJvYXJkXE1haW5EYXNoYm9hcmQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PrivateProject/BlazorServerLoginLogoutDemo/src/BlazorServerLoginLogoutDemo.Web/Pages/Index.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXgucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PrivateProject/BlazorServerLoginLogoutDemo/src/BlazorServerLoginLogoutDemo.Web/Pages/PMSBasis/SystemLoginList.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUE1TQmFzaXNcU3lzdGVtTG9naW5MaXN0LnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PrivateProject/BlazorServerLoginLogoutDemo/src/BlazorServerLoginLogoutDemo.Web/Pages/Project/ProjectList.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvamVjdFxQcm9qZWN0TGlzdC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PrivateProject/BlazorServerLoginLogoutDemo/src/BlazorServerLoginLogoutDemo.Web/Shared/Breadcrumb.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXEJyZWFkY3J1bWIucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PrivateProject/BlazorServerLoginLogoutDemo/src/BlazorServerLoginLogoutDemo.Web/Shared/EmptyLayout.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXEVtcHR5TGF5b3V0LnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PrivateProject/BlazorServerLoginLogoutDemo/src/BlazorServerLoginLogoutDemo.Web/Shared/Favorite.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXEZhdm9yaXRlLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PrivateProject/BlazorServerLoginLogoutDemo/src/BlazorServerLoginLogoutDemo.Web/Shared/Language.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXExhbmd1YWdlLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PrivateProject/BlazorServerLoginLogoutDemo/src/BlazorServerLoginLogoutDemo.Web/Shared/Login.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXExvZ2luLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PrivateProject/BlazorServerLoginLogoutDemo/src/BlazorServerLoginLogoutDemo.Web/Shared/Navigation.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE5hdmlnYXRpb24ucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PrivateProject/BlazorServerLoginLogoutDemo/src/BlazorServerLoginLogoutDemo.Web/Shared/PageTabs.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXFBhZ2VUYWJzLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PrivateProject/BlazorServerLoginLogoutDemo/src/BlazorServerLoginLogoutDemo.Web/Shared/Settings.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXFNldHRpbmdzLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PrivateProject/BlazorServerLoginLogoutDemo/src/BlazorServerLoginLogoutDemo.Web/Shared/SurveyPrompt.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXFN1cnZleVByb21wdC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PrivateProject/BlazorServerLoginLogoutDemo/src/BlazorServerLoginLogoutDemo.Web/_Imports.razor]
+build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PrivateProject/BlazorServerLoginLogoutDemo/src/BlazorServerLoginLogoutDemo.Web/Shared/MainLayout.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE1haW5MYXlvdXQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-qwr5mz1bl4
+
+[D:/PrivateProject/BlazorServerLoginLogoutDemo/src/BlazorServerLoginLogoutDemo.Web/Shared/NavMenu.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE5hdk1lbnUucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-f29dhschvd
+
+[D:/PrivateProject/BlazorServerLoginLogoutDemo/src/BlazorServerLoginLogoutDemo.Web/Pages/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PrivateProject/BlazorServerLoginLogoutDemo/src/BlazorServerLoginLogoutDemo.Web/Pages/_Host.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX0hvc3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PrivateProject/BlazorServerLoginLogoutDemo/src/BlazorServerLoginLogoutDemo.Web/Pages/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX0xheW91dC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 

@@ -1,0 +1,23 @@
+﻿@page "/pages/authentication/LogOut"
+@using System.Security.Claims;
+
+@layout EmptyLayout
+@inject NavigationManager navigation
+@inject ILocalStorageService localStorageService
+@inject AuthenticationStateProvider authenticationStateProvider
+@inject IHttpContextAccessor httpContextAccessor;
+
+<h3>正在退出登录，请稍后......</h3>
+
+@code {
+    /// <summary>
+    /// 组件呈现之后
+    /// </summary>
+    /// <param name="firstRender">用于指示是否是第一次渲染（即组件初始化时的渲染）</param>
+    /// <returns></returns>
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        await ((SystemAuthenticationStateProvider)authenticationStateProvider).LogoutAsync();
+        navigation.NavigateTo(navigation.BaseUri);
+    }
+}

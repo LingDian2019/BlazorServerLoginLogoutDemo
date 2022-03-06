@@ -1,0 +1,14 @@
+﻿global using BlazorComponent;
+global using BlazorComponent.I18n;
+global using Blazored.LocalStorage;
+global using Microsoft.AspNetCore.Components;
+global using Microsoft.AspNetCore.Http;
+global using BlazorServerLoginLogoutDemo.Web.Data.Base;
+global using BlazorServerLoginLogoutDemo.Web.Data.Shared.Favorite;
+global using BlazorServerLoginLogoutDemo.Web.Global;
+global using BlazorServerLoginLogoutDemo.Web.Global.Config;
+global using BlazorServerLoginLogoutDemo.Web.Global.Nav.Model;
+global using System.Net.Http;
+global using System.Net.Http.Json;
+global using System.Reflection;
+global using System.Text.Json;

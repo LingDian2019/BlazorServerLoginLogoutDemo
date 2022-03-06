@@ -1,0 +1,19 @@
+{
+  "$Text": "English",
+  "LoginWelcome": "Welcome To Project Management System",
+  "Account": "Account",
+  "Password": "Password",
+  "Login": "Login",
+  "Edit": "Edit",
+  "Add": "Add",
+  "List": "List",
+  "Others": "Others",
+  "Favorite": "Favorite",
+  "Dashboard": "Dashboard",
+  "ProjectDashboard": "Project Dashboard",
+  "Project": "Project",
+  "ProjectManagement": "Project Management",
+  "SystemBasis": "System",
+  "SystemLoginManagement": "Login Management",
+  "SignOut": "Sign out"
+}

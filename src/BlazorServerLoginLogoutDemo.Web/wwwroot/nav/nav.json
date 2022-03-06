@@ -1,0 +1,38 @@
+[
+  {
+    "Id": 1,
+    "Title": "Dashboard",
+    "Icon": "mdi-trending-up",
+    "Children": [
+      {
+        "Id": 11,
+        "Title": "ProjectDashboard",
+        "Href": "/pages/dashboard/ProjectDashboard"
+      }
+    ]
+  },
+  {
+    "Id": 2,
+    "Title": "Project",
+    "Icon": "mdi-key-chain",
+    "Children": [
+      {
+        "Id": 21,
+        "Title": "ProjectManagement",
+        "Href": "/pages/project/ProjectList"
+      }
+    ]
+  },
+  {
+    "Id": 3,
+    "Title": "SystemBasis",
+    "Icon": "mdi-vector-rectangle ",
+    "Children": [
+      {
+        "Id": 31,
+        "Title": "SystemLoginManagement",
+        "Href": "/pages/systemBasis/SystemLoginManagement"
+      }
+    ]
+  }
+]

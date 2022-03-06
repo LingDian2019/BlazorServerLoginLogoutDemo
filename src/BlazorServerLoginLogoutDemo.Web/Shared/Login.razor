@@ -1,0 +1,28 @@
+﻿@inject I18n I18n
+
+<AuthorizeView>
+    <Authorized>
+        <MMenu OffsetX Left OffsetY>
+            <ActivatorContent Context="menuContext">
+                <span>Hello, @context.User.Identity?.Name!</span>
+                <MButton Icon Large @attributes="menuContext.Attrs">
+                    <MIcon>mdi-account-circle-outline</MIcon>
+                </MButton>
+            </ActivatorContent>
+            <ChildContent>
+                <MList Dense>
+                    <MListItem Link Href="/pages/authentication/LogOut">
+                        <MListItemIcon>
+                            <MIcon>fas fa-sign-out-alt</MIcon>
+                        </MListItemIcon>
+                        <MListItemContent>
+                            <MListItemTitle>
+                                @I18n.T("SignOut")
+                            </MListItemTitle>
+                        </MListItemContent>
+                    </MListItem>
+                </MList>
+            </ChildContent>
+        </MMenu>
+    </Authorized>
+</AuthorizeView>

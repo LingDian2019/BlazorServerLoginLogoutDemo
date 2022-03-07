@@ -13,16 +13,11 @@
         /// <summary>
         /// Authentication Type
         /// </summary>
-        public const string AuthenticationType = "SystemApplicationAuthenticationT";
+        public const string AuthenticationType = "jwt";
 
         /// <summary>
         /// 用户名称
         /// </summary>
         public const string UserName = "UserName";
-
-        /// <summary>
-        /// Redis用户授权信息
-        /// </summary>
-        public const string RedisUserInfo = "Authentication:UserInfo:{0}";
     }
 }

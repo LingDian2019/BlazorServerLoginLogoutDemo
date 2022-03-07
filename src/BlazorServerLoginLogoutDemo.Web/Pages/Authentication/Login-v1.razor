@@ -29,8 +29,8 @@
                 return;
             }
 
-            var tokenInfo = loginService.GetToken(model.LoginAccount, login.ID);
-            await ((SystemAuthenticationStateProvider)authenticationStateProvider).LoginAsync(tokenInfo.Token, login.UserName);
+            var tokenInfo = loginService.GetToken(login.UserName, login.ID);
+            await ((SystemAuthenticationStateProvider)authenticationStateProvider).LoginAsync(tokenInfo.Token);
             navigation.NavigateTo(navigation.BaseUri);
         }
         catch (Exception ex)

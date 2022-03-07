@@ -1,6 +1,8 @@
 ﻿using Microsoft.AspNetCore.Components.Authorization;
 using BlazorServerLoginLogoutDemo.Web.Models;
 using System.Security.Claims;
+using Microsoft.JSInterop;
+using System.IdentityModel.Tokens.Jwt;
 
 namespace BlazorServerLoginLogoutDemo.Web.Pages.Authentication
 {
@@ -51,11 +53,9 @@ namespace BlazorServerLoginLogoutDemo.Web.Pages.Authentication
         /// 登录
         /// </summary>
         /// <param name="token"></param>
-        /// <param name="userName"></param>
-        public async Task LoginAsync(string token, string userName)
+        public async Task LoginAsync(string token)
         {
             await _localStorageService.SetItemAsync(AuthenticationServiceKey.Token, token);
-            await _localStorageService.SetItemAsync(AuthenticationServiceKey.UserName, userName);
             NotifyAuthenticationStateChanged(GetAuthenticationStateAsync());
         }
 
@@ -75,23 +75,21 @@ namespace BlazorServerLoginLogoutDemo.Web.Pages.Authentication
         public async Task<CurrentUser> GetCurrentUserInfo()
         {
             var user = new CurrentUser() { IsAuthenticated = false };
-            string? userName;
             string? token;
 
             try
             {
                 //浏览器还未加载完js时，不能使用LocalStorage
                 token = await _localStorageService.GetItemAsync<string>(AuthenticationServiceKey.Token);
-                userName = await _localStorageService.GetItemAsync<string>(AuthenticationServiceKey.UserName);
             }
             catch (Exception)
             {
                 return user;
             }
 
-            if (!string.IsNullOrEmpty(token) && !string.IsNullOrEmpty(userName))
+            if (!string.IsNullOrEmpty(token))
             {
-                var claims = GetParseClaimsFromJwt(token);
+                var claims = GetJwtDeserialize(token);
                 if (claims != null)
                 {
                     var id = claims.GetValueOrDefault("ID");
@@ -100,8 +98,12 @@ namespace BlazorServerLoginLogoutDemo.Web.Pages.Authentication
                         user.ID = id;
                         user.IsAuthenticated = true;
                     }
-                    user.Roles = GetRoleParseClaimsFromJwt(token);
-                    user.UserName = userName;
+                    user.Roles = GetParseClaimsFromJwt(token);
+                    var userName = claims.GetValueOrDefault(JwtRegisteredClaimNames.Name);
+                    if (userName != null)
+                    {
+                        user.UserName = userName;
+                    }
                 }
             }
 
@@ -114,10 +116,10 @@ namespace BlazorServerLoginLogoutDemo.Web.Pages.Authentication
         /// <param name="jwt"></param>
         /// <param name="dictionary"></param>
         /// <returns></returns>
-        private static IEnumerable<Claim> GetRoleParseClaimsFromJwt(string jwt)
+        private static IEnumerable<Claim> GetParseClaimsFromJwt(string jwt)
         {
             var claims = new List<Claim>();
-            var keyValuePairs = GetParseClaimsFromJwt(jwt);
+            var keyValuePairs = GetJwtDeserialize(jwt);
 
             if (keyValuePairs != null)
             {
@@ -143,6 +145,12 @@ namespace BlazorServerLoginLogoutDemo.Web.Pages.Authentication
                         }
                     }
                 }
+
+                keyValuePairs.TryGetValue(ClaimTypes.Name, out string? userName);
+                if (!string.IsNullOrWhiteSpace(userName))
+                {
+                    claims.Add(new Claim(ClaimTypes.Name, userName));
+                }
             }
 
             return claims;
@@ -152,29 +160,47 @@ namespace BlazorServerLoginLogoutDemo.Web.Pages.Authentication
         /// 解析来自Jwt的声明
         /// </summary>
         /// <param name="jwt"></param>
-        /// <param name="dictionary"></param>
         /// <returns></returns>
-        private static Dictionary<string, string>? GetParseClaimsFromJwt(string jwt)
+        private static Dictionary<string, string>? GetJwtDeserialize(string jwt)
         {
-            var payload = jwt.Split('.')[1];
-            var jsonBytes = ParseBase64WithoutPadding(payload);
+            var jsonBytes = Decode(JwtParts(jwt));
             return JsonSerializer.Deserialize<Dictionary<string, string>>(jsonBytes);
         }
 
         /// <summary>
-        /// 解析没有填充的Base64
+        /// Creates a new instance of <see cref="JwtParts" /> from the string representation of a JWT
         /// </summary>
-        /// <param name="base64"></param>
-        /// <returns></returns>
-        private static byte[] ParseBase64WithoutPadding(string base64)
+        /// <param name="token">The string representation of a JWT</param>
+        /// <exception cref="ArgumentException" />
+        /// <exception cref="ArgumentOutOfRangeException" />
+        public static string JwtParts(string token)
         {
-            switch (base64.Length % 4)
-            {
-                case 2: base64 += "=="; break;
-                case 3: base64 += "="; break;
-            }
+            return token.Split('.')[1];
+        }
 
-            return Convert.FromBase64String(base64);
+        /// <inheritdoc />
+        /// <exception cref="ArgumentException" />
+        /// <exception cref="FormatException" />
+        public static byte[] Decode(string input)
+        {
+            var output = input;
+            output = output.Replace('-', '+'); // 62nd char of encoding
+            output = output.Replace('_', '/'); // 63rd char of encoding
+            switch (output.Length % 4) // Pad with trailing '='s
+            {
+                case 0:
+                    break; // No pad chars in this case
+                case 2:
+                    output += "==";
+                    break; // Two pad chars
+                case 3:
+                    output += "=";
+                    break; // One pad char
+                default:
+                    throw new FormatException("Illegal base64url string.");
+            }
+            var converted = Convert.FromBase64String(output); // Standard base64 decoder
+            return converted;
         }
     }
 }

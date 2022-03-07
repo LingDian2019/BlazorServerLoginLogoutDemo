@@ -1,8 +1,7 @@
-﻿using Microsoft.AspNetCore.Components.Authorization;
-using BlazorServerLoginLogoutDemo.Web.Models;
-using System.Security.Claims;
-using Microsoft.JSInterop;
+﻿using BlazorServerLoginLogoutDemo.Web.Models;
+using Microsoft.AspNetCore.Components.Authorization;
 using System.IdentityModel.Tokens.Jwt;
+using System.Security.Claims;
 
 namespace BlazorServerLoginLogoutDemo.Web.Pages.Authentication
 {

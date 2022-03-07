@@ -41,7 +41,7 @@ namespace BlazorServerLoginLogoutDemo.Web.Pages.Authentication
                     claims.Add(claim);
                 }
 
-                identity = new ClaimsIdentity(claims, AuthenticationServiceKey.Token);
+                identity = new ClaimsIdentity(claims, AuthenticationServiceKey.AuthenticationType);
             }
 
             return new AuthenticationState(new ClaimsPrincipal(identity));

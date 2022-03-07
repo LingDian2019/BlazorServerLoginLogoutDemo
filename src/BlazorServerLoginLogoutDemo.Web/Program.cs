@@ -9,11 +9,6 @@ builder.Services.AddRazorPages();
 builder.Services.AddServerSideBlazor();
 builder.Services.AddHttpContextAccessor();
 builder.Services.AddGlobalForServer();
-//LocalStorage：用于Web浏览器本地数据存储
-builder.Services.AddBlazoredLocalStorage();
-builder.Services.AddAuthorizationCore();
-builder.Services.AddSingleton<LoginService>();
-builder.Services.AddScoped<AuthenticationStateProvider, SystemAuthenticationStateProvider>();
 builder.Services.Configure<CookiePolicyOptions>(options =>
 {
     options.CheckConsentNeeded = context => true;
@@ -22,6 +17,15 @@ builder.Services.Configure<CookiePolicyOptions>(options =>
 builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme).AddCookie();
 builder.Services.AddHttpClient();
 builder.Services.AddScoped<HttpClient>();
+#endregion
+
+#region 授权
+//LocalStorage：用于Web浏览器本地数据存储
+builder.Services.AddBlazoredLocalStorage();
+builder.Services.AddAuthorizationCore();
+builder.Services.AddAuthenticationCore();
+builder.Services.AddSingleton<LoginService>();
+builder.Services.AddScoped<AuthenticationStateProvider, SystemAuthenticationStateProvider>();
 #endregion
 
 #region Masa 向容器添加服务

@@ -1,9 +1,10 @@
-﻿using BlazorServerLoginLogoutDemo.Web.Models;
+﻿using Blazored.LocalStorage;
 using Microsoft.AspNetCore.Components.Authorization;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
+using System.Text.Json;
 
-namespace BlazorServerLoginLogoutDemo.Web.Pages.Authentication
+namespace BlazorServerLoginLogoutDemo.Authentication
 {
     /// <summary>
     /// 系统身份验证状态

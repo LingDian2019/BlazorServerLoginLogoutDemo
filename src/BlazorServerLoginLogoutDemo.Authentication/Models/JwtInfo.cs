@@ -1,4 +1,4 @@
-﻿namespace BlazorServerLoginLogoutDemo.Web.Models
+﻿namespace BlazorServerLoginLogoutDemo.Authentication
 {
     /// <summary>
     /// JWT 信息

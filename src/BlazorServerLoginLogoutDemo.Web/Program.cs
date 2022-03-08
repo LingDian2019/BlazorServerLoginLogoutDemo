@@ -1,3 +1,4 @@
+using BlazorServerLoginLogoutDemo.Authentication;
 using BlazorServerLoginLogoutDemo.Web.Pages.Authentication;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Components.Authorization;

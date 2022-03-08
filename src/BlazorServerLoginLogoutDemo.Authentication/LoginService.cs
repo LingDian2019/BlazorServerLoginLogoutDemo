@@ -1,10 +1,9 @@
-﻿using BlazorServerLoginLogoutDemo.Web.Models;
-using Microsoft.IdentityModel.Tokens;
+﻿using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
 
-namespace BlazorServerLoginLogoutDemo.Web.Pages.Authentication
+namespace BlazorServerLoginLogoutDemo.Authentication
 {
     /// <summary>
     /// 登录服务

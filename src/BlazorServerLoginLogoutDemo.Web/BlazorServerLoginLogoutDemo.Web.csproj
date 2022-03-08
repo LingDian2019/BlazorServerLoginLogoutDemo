@@ -17,6 +17,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\BlazorServerLoginLogoutDemo.Authentication\BlazorServerLoginLogoutDemo.Authentication.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Content Update="wwwroot\i18n\en-US.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

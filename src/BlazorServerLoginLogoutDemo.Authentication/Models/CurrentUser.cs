@@ -1,6 +1,6 @@
 ﻿using System.Security.Claims;
 
-namespace BlazorServerLoginLogoutDemo.Web.Models
+namespace BlazorServerLoginLogoutDemo.Authentication
 {
     /// <summary>
     /// 当前用户

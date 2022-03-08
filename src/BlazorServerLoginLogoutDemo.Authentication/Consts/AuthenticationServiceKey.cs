@@ -1,4 +1,4 @@
-﻿namespace BlazorServerLoginLogoutDemo.Web.Pages.Authentication
+﻿namespace BlazorServerLoginLogoutDemo.Authentication
 {
     /// <summary>
     /// 身份验证服务 Key

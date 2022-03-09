@@ -1,0 +1,60 @@
+﻿@page "/login"
+@using BlazorServerLoginLogoutDemo.Authentication
+
+@inject AuthenticationStateProvider authenticationStateProvider
+@inject NavigationManager navigation
+@inject LoginService loginService
+
+<div class="container">
+    <div class="row justify-content-md-center mb-5">
+        <div class="col-md-auto">
+            <button @onclick="Login1">Login1</button>
+            <button @onclick="Login2">Login2</button>
+            <button @onclick="Login3">Login3</button>
+        </div>
+    </div>
+</div>
+
+@code {
+    private async Task Login1()
+    {
+        var login = loginService.GetUserInfo("admin1", "admin1");
+        if (login == null)
+        {
+            Console.WriteLine("账号或者密码错误");
+            return;
+        }
+
+        var tokenInfo = loginService.GetToken(login.UserName, login.ID);
+        await ((SystemAuthenticationStateProvider)authenticationStateProvider).LoginAsync(tokenInfo.Token);
+        navigation.NavigateTo(navigation.BaseUri); 
+    }
+
+    private async Task Login2()
+    {
+        var login = loginService.GetUserInfo("admin2", "admin2");
+        if (login == null)
+        {
+            Console.WriteLine("账号或者密码错误");
+            return;
+        }
+
+        var tokenInfo = loginService.GetToken(login.UserName, login.ID);
+        await ((SystemAuthenticationStateProvider)authenticationStateProvider).LoginAsync(tokenInfo.Token);
+        navigation.NavigateTo(navigation.BaseUri); 
+    }
+
+    private async Task Login3()
+    {
+        var login = loginService.GetUserInfo("admin3", "admin3");
+        if (login == null)
+        {
+            Console.WriteLine("账号或者密码错误");
+            return;
+        }
+
+        var tokenInfo = loginService.GetToken(login.UserName, login.ID);
+        await ((SystemAuthenticationStateProvider)authenticationStateProvider).LoginAsync(tokenInfo.Token);
+        navigation.NavigateTo(navigation.BaseUri); 
+    }
+}

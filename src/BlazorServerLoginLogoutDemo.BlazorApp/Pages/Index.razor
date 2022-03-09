@@ -1,9 +1,22 @@
 ﻿@page "/"
+@using BlazorServerLoginLogoutDemo.Authentication
+
+@inject AuthenticationStateProvider authenticationStateProvider
+@inject NavigationManager navigation
 
 <PageTitle>Index</PageTitle>
+<div class="container">
+    <div class="row justify-content-md-center mb-5">
+        <div class="col-md-auto">
+            <button @onclick="Logout">Logout</button>
+        </div>
+    </div>
+</div>
+@code {
+    private async Task Logout()
+    {
+        await ((SystemAuthenticationStateProvider)authenticationStateProvider).LogoutAsync();
+        navigation.NavigateTo(navigation.BaseUri);
+    }
+}
 
-<h1>Hello, world!</h1>
-
-Welcome to your new app.
-
-<SurveyPrompt Title="How is Blazor working for you?" />

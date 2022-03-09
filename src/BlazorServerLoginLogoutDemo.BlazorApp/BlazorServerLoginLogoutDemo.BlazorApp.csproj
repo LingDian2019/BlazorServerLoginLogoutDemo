@@ -6,4 +6,8 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\BlazorServerLoginLogoutDemo.Authentication\BlazorServerLoginLogoutDemo.Authentication.csproj" />
+  </ItemGroup>
+
 </Project>

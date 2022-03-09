@@ -145,12 +145,6 @@ namespace BlazorServerLoginLogoutDemo.Authentication
                         }
                     }
                 }
-
-                keyValuePairs.TryGetValue(ClaimTypes.Name, out string? userName);
-                if (!string.IsNullOrWhiteSpace(userName))
-                {
-                    claims.Add(new Claim(ClaimTypes.Name, userName));
-                }
             }
 
             return claims;

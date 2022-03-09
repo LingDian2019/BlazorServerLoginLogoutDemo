@@ -10,6 +10,7 @@ builder.Services.AddServerSideBlazor();
 builder.Services.AddAuthorizationCore();
 builder.Services.AddAuthenticationCore();
 builder.Services.AddBlazoredLocalStorage();
+builder.Services.AddHttpContextAccessor();
 builder.Services.AddSingleton<LoginService>();
 builder.Services.AddScoped<AuthenticationStateProvider, SystemAuthenticationStateProvider>();
 

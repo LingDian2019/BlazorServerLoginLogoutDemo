@@ -3,13 +3,20 @@
 
 @inject AuthenticationStateProvider authenticationStateProvider
 @inject NavigationManager navigation
+@inject IHttpContextAccessor httpContextAccessor
 
-<PageTitle>Index</PageTitle>
 <div class="container">
     <div class="row justify-content-md-center mb-5">
-        <div class="col-md-auto">
-            <button @onclick="Logout">Logout</button>
-        </div>
+        <AuthorizeView>
+            <Authorized>
+                <div class="col-md-auto">
+                    <span>Hello, @context.User.Identity?.Name</span>
+                </div>
+                <div class="col-md-auto">
+                    <button @onclick="Logout">Logout</button>
+                </div>
+            </Authorized>
+        </AuthorizeView>
     </div>
 </div>
 @code {
